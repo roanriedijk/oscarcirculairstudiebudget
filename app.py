@@ -109,12 +109,19 @@ st.markdown(
     f"""
     <style>
     .stApp {{ background:#f4f6fb; }}
+    /* Force readable dark text regardless of the visitor's dark/light setting */
+    .stApp, .stApp p, .stApp label, .stApp span, .stApp li,
+    .stApp h1, .stApp h2, .stApp h3, .stApp h4,
+    [data-testid="stMarkdownContainer"], [data-testid="stWidgetLabel"],
+    [data-testid="stCaptionContainer"] {{
+        color:#{INK} !important;
+    }}
     .ocs-eyebrow {{
         font-size:12px; letter-spacing:0.18em; text-transform:uppercase;
-        color:#{GOLD}; font-weight:700; margin-bottom:4px;
+        color:#{GOLD} !important; font-weight:700; margin-bottom:4px;
     }}
     .ocs-title {{
-        font-size:32px; font-weight:800; color:#{BLUE_DEEP};
+        font-size:32px; font-weight:800; color:#{BLUE_DEEP} !important;
         line-height:1.1; margin:0 0 8px 0;
     }}
     </style>
